@@ -1,0 +1,185 @@
+body {
+  background-image: url("imagens/background.jpg");
+  background-size: cover;
+  /* cobre toda a tela */
+  background-position: center;
+  /* centraliza */
+  background-attachment: fixed;
+  /* fundo fixo */
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  --maxw: 1100px;
+}
+
+/* ===== Background no body ===== */
+body {
+  min-height: 100vh;
+  /* garante que o fundo ocupe a tela toda */
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 200;
+  color: #f7f7f7;
+  line-height: 1.6;
+
+  /* Camada 1: um degradê escuro por cima; Camada 2: a imagem */
+  background-image: linear-gradient(var(--bg-overlay), var(--bg-overlay)),
+    url("imagens/background.jpg");
+  background-size: cover;
+  /* cobre toda a área visível */
+  background-position: center;
+  /* foca o centro da imagem */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* efeito parallax simples em desktop */
+}
+
+/* ===== Topo com logo ===== */
+.topo .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.logo {
+  height: 48px;
+  /* ajuste conforme sua logo */
+  width: auto;
+  display: block;
+}
+
+.menu a {
+  color: #959e78;
+  /* Cor menu*/
+  text-decoration: none;
+  margin-left: 16px;
+  font-weight: 600;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.sobre {
+  display: flex;
+  align-items: flex-start;   /* Alinha pelo topo */
+  justify-content: center;
+  padding: 80px 8px 50px;
+  gap: 60px;                 /* mais espaço entre texto e imagem */
+}
+
+.sobre__conteudo {
+  max-width: 600px;          /* mais largura para o texto */
+  text-align: left;          /* evita centralizar parágrafos longos */
+}
+
+.imagem img {
+  max-width: 400px;  /* controla o tamanho no desktop */
+  height: auto;
+}
+.sobre__conteudo {
+  flex: 1;               /* ocupa o máximo de espaço possível */
+  max-width: 700px;      /* permite ficar mais largo */
+  text-align: left;      /* deixa o texto alinhado à esquerda */
+}
+.sobre__conteudo p, 
+.sobre__conteudo h1, 
+.sobre__conteudo h2 {
+  text-align: left;
+}
+
+.sobre h1 {
+  text-align: left;
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.sobre p {
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* ===== Blocos de conteúdo ===== */
+.bloco {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  margin: 24px auto;
+  padding: 24px;
+  width: min(100% - 32px, var(--maxw));
+}
+
+.bloco h2 {
+  margin-bottom: 8px;
+}
+
+
+.container {
+  display: inline-flex;          /* Coloca itens lado a lado */
+  align-items: center;    /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente (opcional) */
+  gap: 200px;              /* Espaço entre texto e imagem */
+}
+
+.imagem_sobre {
+  flex:0 0 450px;  /* Tamanho fixo para a imagem */
+}
+.imagem_sobre img {
+  max-width: 100%;
+  height: auto;
+}
+
+.pizza-img {
+  width: 50%;           /* Ajuste o tamanho da imagem */
+  height: auto;           /* Mantém proporção */
+}
+
+.pizza-img img {
+  max-width: 100%;  /* controla o tamanho no desktop */
+  height: auto;
+}
+
+/* ===== Acessibilidade básica ===== */
+img {
+  display: block;
+}
+
+img[alt=""] {
+  outline: 2px dashed #f66;
+}
+
+/* ===== Ajustes mobile ===== */
+@media (max-width: 640px) {
+  .sobre h1 {
+    font-size: 32px;
+  }
+  .container {
+    flex-direction: column; /* empilha texto e imagem */
+    text-align: left;
+  }
+
+  .imagem img {
+    max-width: 150px;
+  }
+}
+
+.fa-instagram { 
+  font-size: 23px;
+  color: #959e78;
+}
+
