@@ -6,13 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Brota Pizza Club</title>
   <link rel="stylesheet" href="style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+    rel="stylesheet">
   <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
-  <meta name="description" content="Brota Pizza Club - Pizzas que brotam na sua casa ou evento. Feitas com massa, queijo e afeto.">
+  <meta name="description"
+    content="Brota Pizza Club - Pizzas que brotam na sua casa ou evento. Feitas com massa, queijo e afeto.">
   <meta name="keywords" content="pizza, delivery, eventos, Brota Pizza Club">
   <meta name="author" content="Brota Pizza Club">
 </head>
@@ -27,39 +25,47 @@
         <a href="#sobre">Sobre a Brota</a>
         <a href="#pizzas">Pizzas</a>
         <a href="#contato">Contato</a>
-        <a href="https://www.instagram.com/brotapizzaclub" target="_blank">
+        <a href="https://www.instagram.com/brotapizzaclub" target="_blank" aria-label="Instagram">
           <i class="fa-brands fa-instagram"></i>
         </a>
       </nav>
-
     </div>
 
   </header>
 
-  <main id="sobre">
-    <section class="sobre">
+  <main>
+    <section id="home" class="secao home ativa">
+      <nav class="home-menu">
+        <a href="#sobre" data-bg="imagens/bg-sobre.jpg">Sobre</a>
+        <span class="dot">·</span>
+        <a href="#pizzas" data-bg="imagens/bg-pizzas.jpg">Pizzas</a>
+        <span class="dot">·</span>
+        <a href="#contato" data-bg="imagens/bg-contato.jpg">Contato</a>
+      </nav>
+    </section>
+    <section id="sobre" class="secao sobre">
       <div class="sobre__conteudo">
         <h1>Sobre a Brota</h1>
-        <p> Brota Pizza Club é a marca de pizzas que brota na sua casa ou no seu evento.</p>
-        <p> A gente é feito de massa, queijo e afeto — e acredita que pizza boa é aquela que chega no calor da hora, com baguncinha e gente por perto. </p>
-        <p>Ela nasce da linguagem das ruas, do convite espontâneo, direto e cheio de energia: “Brota!”.</p> 
-        <p> Um chamado que dispensa formalidade e derruba qualquer barreira — porque a gente prefere o real ao formal, e vê na pizza mais do que comida: vê encontro, parceria e bons momentos.</p>
-        <p> Aqui, a gente não entrega só fatia. a gente entrega presença.</p>
-        <p>É forno quente, massa aberta na hora, ingredientes frescos e mão que sabe o que faze.</p>
+        <p>Brota Pizza Club é a marca de pizzas que brota na sua casa ou no seu evento.</p>
+        <p>A gente é feito de massa, queijo e afeto — e acredita que pizza boa é aquela que chega no calor da hora, com
+          baguncinha e gente por perto.</p>
+        <p>Ela nasce da linguagem das ruas, do convite espontâneo, direto e cheio de energia: “Brota!”.</p>
+        <p>Um chamado que dispensa formalidade e derruba qualquer barreira — porque a gente prefere o real ao formal, e
+          vê na pizza mais do que comida: vê encontro, parceria e bons momentos.</p>
+        <p>Aqui, a gente não entrega só fatia. A gente entrega presença.</p>
+        <p>É forno quente, massa aberta na hora, ingredientes frescos e mão que sabe o que faz.</p>
         <p>É olho no olho, risada fácil e aquele pedaço a mais porque “tá muito bom pra parar agora”.</p>
         <p>Mais do que uma palavra, é um chamado para viver o agora, pra estar junto, pra aproveitar.</p>
         <p>Para sentir que a vida é melhor quando cabe todo mundo na mesma mesa — e sempre cabe mais um.</p>
-        <p> Brota é isso: a pizza como pretexto, o momento como propósito. E no final, não importa onde — importa quem tá junto.</p>
-
-        </p>
+        <p>Brota é isso: a pizza como pretexto, o momento como propósito. E no final, não importa onde — importa quem tá
+          junto.</p>
       </div>
       <div class="imagem_sobre">
         <img src="imagens/sobre_imagem.jpg" alt="imagem sobre a Brota Pizza Club" />
       </div>
-
     </section>
 
-    <section class="pizzas" id="pizzas">
+    <section id="pizzas" class="secao pizzas">
       <h2>Nossas Pizzas</h2>
       <div class="pizza-list">
         <div class="pizza-item">
@@ -69,26 +75,35 @@
         </div>
         <div class="pizza-item">
           <img src="imagens/pizza_queijos.jpg" class="pizza-img" alt="Pizza 4 Queijos" />
-          <h3>4 queijos</h3>
+          <h3>4 Queijos</h3>
           <p>Clássica com molho de tomate, mussarela.</p>
         </div>
         <div class="pizza-item">
           <img src="imagens/pizza_carnedepanela.jpg" class="pizza-img" alt="Pizza Carne de Panela" />
           <h3>Carne de Panela</h3>
-          <p>Da casa com molho de tomate, mussarela e carne de panelas.</p>
+          <p>Da casa com molho de tomate, mussarela e carne de panela.</p>
         </div>
         <div class="pizza-item">
           <img src="imagens/pizza_frango.jpg" class="pizza-img" alt="Frango com requeijão" />
-          <h3>Frango com requeijão</h3>
-          <p>Clássica BR com molho de tomate, mussarela, frango e requeijão.</p>
+          <h3>Frango com Requeijão</h3>
+          <p>Molho de tomate, mussarela, frango e requeijão.</p>
         </div>
       </div>
     </section>
 
-
-    <script src="script.js"></script>
+    <section id="contato" class="secao contato">
+      <h2>Contato</h2>
+      <p>Quer fazer pedido ou levar a Brota para o seu evento?</p>
+      <ul class="contatos">
+        <li><a href="https://www.instagram.com/brotapizzaclub" target="_blank">Brota no Instagram @brotapizzaclub</a>
+        </li>
+        <li><a href="https://wa.me/555195010016" target="_blank">Brota no WhatssApp</a></li>
+      </ul>
+    </section>
   </main>
 
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </body>
 
 </html>
