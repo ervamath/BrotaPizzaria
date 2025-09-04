@@ -21,6 +21,13 @@
       <a href="#home" class="logo-link">
         <img src="imagens/brota_logo.png" alt="Logo" class="logo" />
       </a>
+      
+      <button class="menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
       <nav class="menu">
         <a href="#sobre">Sobre a Brota</a>
         <a href="#pizzas">Pizzas</a>
@@ -30,7 +37,6 @@
         </a>
       </nav>
     </div>
-
   </header>
 
   <main>
@@ -91,14 +97,50 @@
       </div>
     </section>
 
-    <section id="contato" class="secao contato">
-      <h2>Contato</h2>
-      <p>Quer fazer pedido ou levar a Brota para o seu evento?</p>
+<section id="contato" class="secao-contato">
+  <h2>Quer fazer pedido ou levar a Brota para o seu evento?</h2>
+  <div class="contato-container">
+    <div class="contato-img">
+      <img class="img-contato img-a" src="imagens/Icone_contato1.png" alt="Cards de contato" />
+      <img class="img-contato img-b" src="imagens/Icone_contato2.png" alt="Cards de contato" />
+    </div>  
+    <div class="contato-info">
       <ul class="contatos">
-        <li><a href="https://www.instagram.com/brotapizzaclub" target="_blank">Brota no Instagram @brotapizzaclub</a>
+        <li>
+          <a>
+            <i class="fa-solid fa-pizza-slice" aria-hidden="true"></i>
+            <span>Pizzas on Demand</span>
+            <span class="descricao">Peça quando quiser, receba pizzas artesanais feitas na hora.</span>
+          </a>
         </li>
-        <li><a href="https://wa.me/555195010016" target="_blank">Brota no WhatssApp</a></li>
+        <li>
+          <a>
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
+            <span>Na sua casa</span>
+            <span class="descricao">O sabor da Piticinha entregue quentinho na sua porta.</span>
+          </a>
+        </li>
+        <li>
+          <a>
+            <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+            <span>No seu evento</span>
+            <span class="descricao">O sabor da Nuticinha entregue quentinho na sua porta.</span>
+          </a>
+        </li>
+
+        <li class="btn-inline">
+          <a class="btn-verde" href="https://www.instagram.com/brotapizzaclub" target="_blank" rel="noopener">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>Instagram @brotapizzaclub
+          </a>
+        </li>
+        <li class="btn-inline">
+          <a class="btn-verde" href="https://wa.me/555195010016" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>WhatssApp
+          </a>
+        </li>
       </ul>
+    </div>
+  </div>
     </section>
   </main>
 
