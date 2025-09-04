@@ -60,3 +60,17 @@ homeLinks.forEach(link => {
     document.body.style.backgroundImage = "linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('imagens/background.jpg')";
   });
 });
+
+function centralizarHome() {
+  const homeMenu = document.querySelector('.home-menu');
+  const alturaTela = window.innerHeight;
+  const alturaMenu = homeMenu.offsetHeight;
+
+  // distância do topo para centralizar
+  const margemTop = (alturaTela - alturaMenu) / 3;
+  homeMenu.style.marginTop = `${margemTop}px`;
+}
+
+// executa no carregamento e ao redimensionar a tela
+window.addEventListener('load', centralizarHome);
+window.addEventListener('resize', centralizarHome);
