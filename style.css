@@ -162,7 +162,25 @@ body {
   justify-content: center;
   gap: 30px;
   padding: 80px 16px;
-    max-width: 1200px; 
+
+  max-width: 1200px; 
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sobre-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.sobre-container.invertida {
+  flex-direction: row-reverse;
+
 }
 
 .sobre__conteudo {
@@ -188,8 +206,8 @@ body {
 .imagem_sobre img {
   max-width: 540px;
   height: auto;
-    display: block;
-  border-radius: 12px;
+
+  display: block;
 }
 
 /* ===== Pizzas ===== */
@@ -221,16 +239,16 @@ body {
 }
 
 /* ===== Contato ===== */
-.secao-contato {
+.secao.contato {
   font-family: "Bricolage Grotesque", sans-serif;
   font-size: 1.125rem;
 }
 
-.secao-contato li::marker { 
+.secao.contato li::marker { 
   content: ""; 
 }
 
-.secao-contato h2 {
+.secao.contato h2 {
   text-align: center;
   font-size: clamp(1.25rem, 4vw, 1.5rem);
   margin-bottom: 2rem;

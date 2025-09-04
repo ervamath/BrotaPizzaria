@@ -59,3 +59,80 @@ homeLinks.forEach(link => {
     document.body.style.backgroundImage = "linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('imagens/background.jpg')";
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('.img-contato');
+  if (images.length === 0) return;
+
+  let currentIndex = 0;
+  images[currentIndex].classList.add('active');
+
+  if (images.length === 1) return;
+
+  setInterval(() => {
+    images[currentIndex].classList.remove('active');
+    
+    currentIndex = (currentIndex + 1) % images.length;
+    
+    setTimeout(() => {
+      images[currentIndex].classList.add('active');
+    }, 500); 
+  }, 5000); 
+});
+
+// Menu hambúrguer
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  
+  const backdrop = document.createElement('div');
+  backdrop.classList.add('menu-backdrop');
+  document.body.appendChild(backdrop);
+  
+  function toggleMenu() {
+    menuToggle.classList.toggle('active');
+    menu.classList.toggle('active');
+    backdrop.classList.toggle('active');
+    
+    if (menu.classList.contains('active')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+  
+  menuToggle.addEventListener('click', toggleMenu);
+  
+  backdrop.addEventListener('click', toggleMenu);
+  
+  const menuLinks = menu.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      if (menu.classList.contains('active')) {
+        toggleMenu();
+      }
+    });
+  });
+  
+  window.addEventListener('resize', function() {
+    if (window.innerWidth > 768 && menu.classList.contains('active')) {
+      toggleMenu();
+    }
+  });
+});
+
+function centralizarHome() {
+  const homeMenu = document.querySelector('.home-menu');
+  const alturaTela = window.innerHeight;
+  const alturaMenu = homeMenu.offsetHeight;
+
+  // distância do topo para centralizar
+  const margemTop = (alturaTela - alturaMenu) / 3;
+  homeMenu.style.marginTop = `${margemTop}px`;
+}
+
+// executa no carregamento e ao redimensionar a tela
+window.addEventListener('load', centralizarHome);
+window.addEventListener('resize', centralizarHome);
+
