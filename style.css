@@ -26,7 +26,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  transition: background-image 0.5s ease;
+  transition: background-image 0.3s ease;
 }
 
 .topo {
@@ -112,13 +112,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: auto;       
   text-align: center;
 }
 
 .home-menu {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 5rem;
   color: #fff;
 }
 
@@ -164,12 +162,12 @@ body {
   justify-content: center;
   gap: 30px;
   padding: 80px 16px;
-  max-width: 1200px; 
+    max-width: 1200px; 
 }
 
 .sobre__conteudo {
   flex: 1;
-  max-width: 700px;
+  max-width: 2000px;
   text-align: left;
 }
 
@@ -185,13 +183,12 @@ body {
 
 .imagem_sobre {
   flex: 0 0 420px;
-  align-self: right;
 }
 
 .imagem_sobre img {
-  max-width: 640px;
+  max-width: 540px;
   height: auto;
-  display: block;
+    display: block;
   border-radius: 12px;
 }
 
@@ -475,7 +472,7 @@ body {
 /*NÃO REMOVER - Adptação para diferntes telas, mobile incluso */
 @media (max-width: 768px) {
   .sobre {
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .sobre__conteudo {
