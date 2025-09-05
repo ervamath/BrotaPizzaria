@@ -136,3 +136,27 @@ function centralizarHome() {
 window.addEventListener('load', centralizarHome);
 window.addEventListener('resize', centralizarHome);
 
+
+//parte das descrições da pizza
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.cardapio-brota .info h3').forEach(h3 => {
+      const descricao = h3.parentElement.querySelector('p');
+
+      if (descricao) {
+        h3.addEventListener('mouseenter', () => {
+          descricao.style.display = 'block';
+          requestAnimationFrame(() => {
+            descricao.style.opacity = '1';
+          });
+        });
+
+        h3.addEventListener('mouseleave', () => {
+          descricao.style.opacity = '0';
+          setTimeout(() => {
+            descricao.style.display = 'none';
+          }, 300);
+        });
+      }
+    });
+  });
+
