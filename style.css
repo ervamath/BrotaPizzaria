@@ -29,6 +29,18 @@ body {
   transition: background-image 0.3s ease;
 }
 
+.rodape {
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+  padding: 16px;
+  opacity: 0.8;
+}
+
+.rodape p {
+  margin: 0;
+}
+
 .topo {
   position: sticky;
   top: 0;
