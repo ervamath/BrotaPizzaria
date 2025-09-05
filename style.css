@@ -211,33 +211,111 @@ body {
 }
 
 /* ===== Pizzas ===== */
-.pizzas h2 {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.pizza-list {
-  max-width: var(--maxw);
-  margin: 0 auto;
+.cardapio-brota {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  gap: 60px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
-.pizza-item {
-  text-align: center;
-  border-radius: 14px;
-  width: 260px;
+.card .foto {
+  flex: 0 0 220px;
 }
 
-.pizza-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  display: block;
+.card .foto img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
+.card:hover .foto img {
+  transform: scale(1.05);
+}
+
+.card .info {
+  flex: 1;
+  color: #f8fcfa;
+}
+
+.card .info h3 {
+  font-size: 1.6rem;
+  margin: 0 0 8px;
+  text-transform: capitalize;
+}
+
+.card .info h4 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+  font-weight: normal;
+  opacity: 0.9;
+}
+
+.card .info p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  opacity: 0.85;
+}
+
+/* Alternância da ordem */
+.linha-direita {
+  flex-direction: row-reverse;
+}
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .card .foto {
+    flex: none;
+    margin-bottom: 20px;
+  }
+
+  .card .foto img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .card .info h3 {
+    font-size: 1.4rem;
+  }
+
+  .card .info h4 {
+    font-size: 1.1rem;
+  }
+
+  .card .info p {
+    font-size: 1rem;
+  }
+  .card .info p {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  margin-top: 10px;
+}
+.descricao {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+}
 /* ===== Contato ===== */
 .secao.contato {
   font-family: "Bricolage Grotesque", sans-serif;
@@ -555,4 +633,5 @@ body {
   .menu-backdrop.active {
     display: block;
   }
+
 }
